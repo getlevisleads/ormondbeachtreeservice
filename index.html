@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ormond Beach Tree Service</title>
+<meta name="description" content="Get connected with an independent local tree company in Ormond Beach, FL for tree removal, trimming, palm trimming, stump grinding and storm cleanup. Free referral service.">
+<link rel="canonical" href="https://ormondbeachtreeservice.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Ormond Beach Tree Service referrals",
+  "serviceType": "Tree service referral",
+  "description": "Free referral service that connects Ormond Beach homeowners with independent local tree companies.",
+  "areaServed": { "@type": "City", "name": "Ormond Beach", "containedInPlace": { "@type": "State", "name": "Florida" } },
+  "provider": { "@type": "Organization", "name": "Ormond Beach Tree Service", "url": "https://ormondbeachtreeservice.com/" }
+}
+</script>
+<style>
+/* Layout: one strong hero (name, number, CTAs beside the quote form), then services grid, FAQ list, plain disclosure footer. */
+:root {
+  --cream: #efebe4;
+  --tan: #d9c8b4;
+  --camel: #b0866a;
+  --bark: #6f4e3a;
+  --moss: #5f6b4e;
+  --moss-deep: #414a35;
+  --rust: #8a2d0b;
+  --rust-hover: #a3380f;
+  --ink: #2b2620;
+  --muted: #5e554b;
+  --white: #fffdf9;
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius: 6px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 17px/1.6 var(--body); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.05; text-wrap: balance; margin: 0; }
+a { color: var(--rust); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--camel); outline-offset: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+
+/* Hero */
+.hero { background: var(--moss-deep); color: var(--cream); padding-block: 56px 64px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
+.hero-copy { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tan); }
+.hero h1 { font-size: clamp(48px, 8vw, 92px); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; }
+.hero h1 span { display: block; color: var(--tan); }
+.phone { font-family: var(--display); font-weight: 700; font-size: clamp(40px, 6.5vw, 68px); color: var(--white); text-decoration: none; line-height: 1; font-variant-numeric: tabular-nums; }
+.phone:hover { color: var(--tan); }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: var(--radius); font: 700 19px/1 var(--body); text-decoration: none; border: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.btn svg { width: 22px; height: 22px; flex: none; }
+.btn-rust { background: var(--rust); color: var(--white); }
+.btn-rust:hover { background: var(--rust-hover); }
+.btn-outline { background: transparent; color: var(--cream); border-color: var(--tan); }
+.btn-outline:hover { background: rgba(217, 200, 180, 0.12); }
+.hero-note { font-size: 16px; color: var(--tan); max-width: 46ch; margin: 0; }
+
+/* Form */
+.quote { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 28px; border-top: 6px solid var(--rust); min-width: 0; }
+.quote h2 { font-size: 32px; text-transform: uppercase; color: var(--moss-deep); }
+.quote p.sub { margin: 4px 0 18px; color: var(--muted); font-size: 16px; }
+.quote form { display: grid; gap: 14px; }
+.field { display: grid; gap: 4px; }
+.field label { font-weight: 600; font-size: 15px; }
+.field input, .field textarea { width: 100%; font: inherit; color: var(--ink); background: var(--cream); border: 1px solid var(--tan); border-radius: 4px; padding: 11px 12px; }
+.field textarea { min-height: 96px; resize: vertical; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.quote .btn { width: 100%; }
+.consent { font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0; }
+.form-msg { font-weight: 600; color: var(--moss-deep); margin: 0; }
+
+/* Sections */
+section.block { padding-block: 72px; }
+.section-head { display: grid; gap: 8px; margin-bottom: 32px; max-width: 680px; }
+.section-head h2 { font-size: clamp(36px, 5vw, 52px); text-transform: uppercase; color: var(--moss-deep); }
+.section-head p { margin: 0; color: var(--muted); }
+
+.services { background: var(--cream); }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--tan); border: 2px solid var(--tan); border-radius: var(--radius); overflow: hidden; }
+.svc { background: var(--white); padding: 26px 24px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.svc h3 { font-size: 27px; color: var(--bark); text-transform: uppercase; }
+.svc p { margin: 0; color: var(--ink); }
+
+.mid-cta { background: var(--bark); color: var(--cream); padding-block: 36px; }
+.mid-cta .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.mid-cta p { margin: 0; font-family: var(--display); font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1.1; }
+
+.faq { background: var(--tan); }
+.faq-list { display: grid; gap: 10px; max-width: 820px; }
+.faq details { background: var(--white); border-radius: var(--radius); padding: 0 22px; }
+.faq summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--display); font-size: 28px; line-height: 0.8; color: var(--rust); flex: none; }
+.faq details[open] summary::after { content: "\2013"; }
+.faq details p { margin: 0 0 18px; max-width: 68ch; }
+
+footer { background: var(--ink); color: var(--tan); padding-block: 40px; font-size: 15px; }
+footer .wrap { display: grid; gap: 12px; }
+footer strong { color: var(--cream); }
+footer a { color: var(--cream); }
+footer p { margin: 0; max-width: 80ch; }
+
+/* Sticky mobile call bar */
+.callbar { display: none; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .hero { padding-block: 36px 44px; }
+  .ctas .btn { flex: 1 1 140px; padding: 0 16px; }
+  .row2, .svc-grid { grid-template-columns: 1fr; }
+  .quote { padding: 22px 18px; }
+  section.block { padding-block: 52px; }
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); background: var(--moss-deep); z-index: 10; }
+  .callbar .btn { min-height: 48px; font-size: 17px; }
+  footer { padding-bottom: 96px; }
+}
+</style>
+</head>
+<body>
+
+<!-- PHONE PLACEHOLDER: replace (386) 555-0100 / +13865550100 everywhere once the CallScaler number exists. -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Tree removal, trimming and stump grinding in Ormond Beach, FL</div>
+      <h1>Ormond Beach <span>Tree Service</span></h1>
+      <a class="phone" href="tel:+13865550100">(386) 555-0100</a>
+      <div class="ctas">
+        <a class="btn btn-rust" href="tel:+13865550100">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-outline" href="sms:+13865550100">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2zm3 6v2h10V9zm0 4v2h7v-2z"/></svg>
+          Text Message
+        </a>
+      </div>
+      <p class="hero-note">We're a free referral service, not a tree company. Call, text or send the form and we'll connect you with an independent local tree pro who can quote your job.</p>
+    </div>
+
+    <div class="quote" id="quote">
+      <h2>Get a free quote</h2>
+      <p class="sub">Tell us about the tree. A local pro will get back to you.</p>
+      <form id="lead-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Brief message</label>
+          <textarea id="message" name="message" placeholder="e.g. Large oak leaning over the driveway, want it removed"></textarea>
+        </div>
+        <button class="btn btn-rust" type="submit">Request my quote</button>
+        <p class="consent">By sending this form you agree to be contacted by phone, text or email about your tree job. No cost, no obligation.</p>
+        <p class="form-msg" id="form-msg" hidden></p>
+      </form>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Tree services in Ormond Beach</h2>
+        <p>The local companies we refer to handle residential and commercial tree work across Ormond Beach and Ormond-by-the-Sea.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><h3>Tree removal</h3><p>Dead, leaning or unwanted trees taken down safely, including large oaks near homes, pools and power lines.</p></div>
+        <div class="svc"><h3>Tree trimming</h3><p>Pruning to thin crowns, lift limbs off roofs and driveways, and cut back weak branches before storm season.</p></div>
+        <div class="svc"><h3>Palm trimming</h3><p>Removal of dead fronds, seed pods and boots without over-cutting the healthy green fronds palms need.</p></div>
+        <div class="svc"><h3>Stump grinding</h3><p>Stumps ground below grade so the spot can be sodded, planted or built on.</p></div>
+        <div class="svc"><h3>Storm cleanup</h3><p>Fallen trees and hanging limbs after hurricanes and summer storms. Call for urgent jobs.</p></div>
+        <div class="svc"><h3>Lot clearing</h3><p>Brush, small trees and debris cleared from lots and overgrown yards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mid-cta">
+    <div class="wrap">
+      <p>Tree down or hanging over the house?</p>
+      <div class="ctas">
+        <a class="btn btn-rust" href="tel:+13865550100">Call (386) 555-0100</a>
+        <a class="btn btn-outline" href="#quote">Send the form</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="block faq" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Tree service questions</h2>
+        <p>Straight answers to what Ormond Beach homeowners ask most.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How much does tree removal cost in Ormond Beach?</summary>
+          <p>It depends on the tree's height and trunk width, how close it is to the house or power lines, whether a crane or bucket truck is needed, and whether you want the stump ground and the wood hauled away. Small trees can be a few hundred dollars while large oaks over a roof can run into the thousands. The fastest way to a real number is a free on-site quote.</p>
+        </details>
+        <details>
+          <summary>Does the price include hauling away the wood and debris?</summary>
+          <p>Not always. Some companies quote removal only and charge extra for hauling, log removal or stump grinding. Ask for a written quote that lists cleanup and haul-away so you can compare companies fairly.</p>
+        </details>
+        <details>
+          <summary>Do I need a permit to remove a tree in Ormond Beach?</summary>
+          <p>Ormond Beach regulates tree removal, and some trees and sizes need city approval, so check with the city before cutting. Under Florida Statute 163.045, a homeowner doesn't need a local permit to remove a tree on residential property if a certified arborist or Florida-licensed landscape architect documents in writing that it poses an unacceptable risk to people or property.</p>
+        </details>
+        <details>
+          <summary>Is "hurricane cutting" my palm trees a good idea?</summary>
+          <p>No. Stripping a palm down to a few fronds weakens it and can make it more likely to fail in a storm. Remove dead and drooping fronds and seed pods, and leave the healthy green crown in place.</p>
+        </details>
+        <details>
+          <summary>Who trims trees near power lines, me or FPL?</summary>
+          <p>Florida Power &amp; Light maintains clearance around its main distribution lines. Never trim near a line yourself. If a tree touches the line running to your house, contact FPL first. A tree company can handle the rest of the tree once the line is safe.</p>
+        </details>
+        <details>
+          <summary>Does homeowners insurance cover tree removal?</summary>
+          <p>Usually only when a tree falls on a covered structure such as your house, garage or fence, and coverage for removal is often capped. Taking down a healthy tree as a precaution is normally not covered. Check your policy and take photos before any work starts.</p>
+        </details>
+        <details>
+          <summary>When is the best time to trim trees in Florida?</summary>
+          <p>Late winter through spring is a good window for most trees, and it gets limbs off roofs before hurricane season starts in June. Dead or hazardous limbs can be removed any time of year.</p>
+        </details>
+        <details>
+          <summary>Who will actually do the work?</summary>
+          <p>An independent local tree company. This site is a referral service. We don't employ crews or do tree work ourselves. When you call, text or send the form, we pass your request to a local company that serves Ormond Beach. Always ask any company for proof of insurance before work starts.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Ormond Beach Tree Service</strong> is a free referral website for homeowners in Ormond Beach, Florida.</p>
+    <p>We are not a tree service company and do not perform tree work. Calls, texts and form requests are passed to independent local tree companies, who set their own prices and are responsible for their own work.</p>
+    <p>&copy; 2026 Ormond Beach Tree Service</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Contact">
+  <a class="btn btn-rust" href="tel:+13865550100">Call Now</a>
+  <a class="btn btn-outline" href="sms:+13865550100">Text</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How much does tree removal cost in Ormond Beach?","acceptedAnswer":{"@type":"Answer","text":"It depends on the tree's height and trunk width, how close it is to the house or power lines, whether a crane or bucket truck is needed, and whether you want the stump ground and the wood hauled away. Small trees can be a few hundred dollars while large oaks over a roof can run into the thousands."}},
+    {"@type":"Question","name":"Does the price include hauling away the wood and debris?","acceptedAnswer":{"@type":"Answer","text":"Not always. Some companies quote removal only and charge extra for hauling, log removal or stump grinding. Ask for a written quote that lists cleanup and haul-away."}},
+    {"@type":"Question","name":"Do I need a permit to remove a tree in Ormond Beach?","acceptedAnswer":{"@type":"Answer","text":"Ormond Beach regulates tree removal, so check with the city before cutting. Under Florida Statute 163.045, a homeowner doesn't need a local permit to remove a residential tree if a certified arborist or Florida-licensed landscape architect documents that it poses an unacceptable risk."}},
+    {"@type":"Question","name":"Is hurricane cutting my palm trees a good idea?","acceptedAnswer":{"@type":"Answer","text":"No. Stripping a palm down to a few fronds weakens it. Remove dead and drooping fronds and seed pods and leave the healthy green crown."}},
+    {"@type":"Question","name":"Who trims trees near power lines, me or FPL?","acceptedAnswer":{"@type":"Answer","text":"Florida Power & Light maintains clearance around its main distribution lines. Never trim near a line yourself; contact FPL first."}},
+    {"@type":"Question","name":"Does homeowners insurance cover tree removal?","acceptedAnswer":{"@type":"Answer","text":"Usually only when a tree falls on a covered structure, and removal coverage is often capped. Removing a healthy tree as a precaution is normally not covered."}},
+    {"@type":"Question","name":"When is the best time to trim trees in Florida?","acceptedAnswer":{"@type":"Answer","text":"Late winter through spring suits most trees and gets limbs off roofs before hurricane season starts in June. Dead or hazardous limbs can be removed any time."}},
+    {"@type":"Question","name":"Who will actually do the work?","acceptedAnswer":{"@type":"Answer","text":"An independent local tree company. This site is a referral service and does not do tree work itself."}}
+  ]
+}
+</script>
+<script>
+// Draft only: the form isn't connected yet. Later this will POST to a Cloudflare Pages Function that emails and stores the lead.
+document.getElementById('lead-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var msg = document.getElementById('form-msg');
+  if (!this.checkValidity()) {
+    msg.textContent = 'Please fill in your name, email and phone so a tree pro can reach you.';
+  } else {
+    msg.textContent = 'Draft preview: this form is not connected yet, so nothing was sent.';
+  }
+  msg.hidden = false;
+});
+</script>
+</body>
+</html>
