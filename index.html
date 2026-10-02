@@ -20,117 +20,7 @@
   "provider": { "@type": "Organization", "name": "Ormond Beach Tree Service", "url": "https://ormondbeachtreeservice.com/" }
 }
 </script>
-<style>
-/* Layout: one strong hero (name, number, CTAs beside the quote form), then services grid, FAQ list, plain disclosure footer. */
-:root {
-  --cream: #efebe4;
-  --tan: #d9c8b4;
-  --camel: #b0866a;
-  --bark: #6f4e3a;
-  --moss: #5f6b4e;
-  --moss-deep: #414a35;
-  --rust: #8a2d0b;
-  --rust-hover: #a3380f;
-  --ink: #2b2620;
-  --muted: #5e554b;
-  --white: #fffdf9;
-  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
-  --body: "Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --radius: 6px;
-  color-scheme: light;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--cream); color: var(--ink); font: 17px/1.6 var(--body); }
-h1, h2, h3 { font-family: var(--display); line-height: 1.05; text-wrap: balance; margin: 0; }
-a { color: var(--rust); }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--camel); outline-offset: 2px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
-
-/* Hero */
-.hero { background: var(--moss-deep); color: var(--cream); padding-block: 56px 64px; }
-.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
-.hero-copy { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
-.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tan); }
-.hero h1 { font-size: clamp(48px, 8vw, 92px); font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; }
-.hero h1 span { display: block; color: var(--tan); }
-.phone { font-family: var(--display); font-weight: 700; font-size: clamp(40px, 6.5vw, 68px); color: var(--white); text-decoration: none; line-height: 1; font-variant-numeric: tabular-nums; }
-.phone:hover { color: var(--tan); }
-.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: var(--radius); font: 700 19px/1 var(--body); text-decoration: none; border: 2px solid transparent; cursor: pointer; white-space: nowrap; }
-.btn svg { width: 22px; height: 22px; flex: none; }
-.btn-rust { background: var(--rust); color: var(--white); }
-.btn-rust:hover { background: var(--rust-hover); }
-.btn-outline { background: transparent; color: var(--cream); border-color: var(--tan); }
-.btn-outline:hover { background: rgba(217, 200, 180, 0.12); }
-.hero-note { font-size: 16px; color: var(--tan); max-width: 46ch; margin: 0; }
-
-/* Form */
-.quote { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 28px; border-top: 6px solid var(--rust); min-width: 0; }
-.quote h2 { font-size: 32px; text-transform: uppercase; color: var(--moss-deep); }
-.quote p.sub { margin: 4px 0 18px; color: var(--muted); font-size: 16px; }
-.quote form { display: grid; gap: 14px; }
-.field { display: grid; gap: 4px; }
-.field label { font-weight: 600; font-size: 15px; }
-.field input, .field textarea { width: 100%; font: inherit; color: var(--ink); background: var(--cream); border: 1px solid var(--tan); border-radius: 4px; padding: 11px 12px; }
-.field textarea { min-height: 96px; resize: vertical; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.quote .btn { width: 100%; }
-.consent { font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.form-msg { font-weight: 600; color: var(--moss-deep); margin: 0; }
-
-/* Sections */
-section.block { padding-block: 72px; }
-.section-head { display: grid; gap: 8px; margin-bottom: 32px; max-width: 680px; }
-.section-head h2 { font-size: clamp(36px, 5vw, 52px); text-transform: uppercase; color: var(--moss-deep); }
-.section-head p { margin: 0; color: var(--muted); }
-
-.services { background: var(--cream); }
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--tan); border: 2px solid var(--tan); border-radius: var(--radius); overflow: hidden; }
-.svc { background: var(--white); padding: 26px 24px; display: grid; gap: 8px; align-content: start; min-width: 0; }
-.svc h3 { font-size: 27px; color: var(--bark); text-transform: uppercase; }
-.svc p { margin: 0; color: var(--ink); }
-
-.mid-cta { background: var(--bark); color: var(--cream); padding-block: 36px; }
-.mid-cta .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
-.mid-cta p { margin: 0; font-family: var(--display); font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1.1; }
-
-.faq { background: var(--tan); }
-.faq-list { display: grid; gap: 10px; max-width: 820px; }
-.faq details { background: var(--white); border-radius: var(--radius); padding: 0 22px; }
-.faq summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 16px; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; font-family: var(--display); font-size: 28px; line-height: 0.8; color: var(--rust); flex: none; }
-.faq details[open] summary::after { content: "\2013"; }
-.faq details p { margin: 0 0 18px; max-width: 68ch; }
-
-footer { background: var(--ink); color: var(--tan); padding-block: 40px; font-size: 15px; }
-footer .wrap { display: grid; gap: 12px; }
-footer strong { color: var(--cream); }
-footer a { color: var(--cream); }
-footer p { margin: 0; max-width: 80ch; }
-
-/* Sticky mobile call bar */
-.callbar { display: none; }
-
-@media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .svc-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 600px) {
-  body { font-size: 16px; }
-  .hero { padding-block: 36px 44px; }
-  .ctas .btn { flex: 1 1 140px; padding: 0 16px; }
-  .row2, .svc-grid { grid-template-columns: 1fr; }
-  .quote { padding: 22px 18px; }
-  section.block { padding-block: 52px; }
-  .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px)); background: var(--moss-deep); z-index: 10; }
-  .callbar .btn { min-height: 48px; font-size: 17px; }
-  footer { padding-bottom: 96px; }
-}
-</style>
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 
@@ -192,11 +82,11 @@ footer p { margin: 0; max-width: 80ch; }
         <p>The local companies we refer to handle residential and commercial tree work across Ormond Beach and Ormond-by-the-Sea.</p>
       </div>
       <div class="svc-grid">
-        <div class="svc"><h3>Tree removal</h3><p>Dead, leaning or unwanted trees taken down safely, including large oaks near homes, pools and power lines.</p></div>
-        <div class="svc"><h3>Tree trimming</h3><p>Pruning to thin crowns, lift limbs off roofs and driveways, and cut back weak branches before storm season.</p></div>
-        <div class="svc"><h3>Palm trimming</h3><p>Removal of dead fronds, seed pods and boots without over-cutting the healthy green fronds palms need.</p></div>
-        <div class="svc"><h3>Stump grinding</h3><p>Stumps ground below grade so the spot can be sodded, planted or built on.</p></div>
-        <div class="svc"><h3>Storm cleanup</h3><p>Fallen trees and hanging limbs after hurricanes and summer storms. Call for urgent jobs.</p></div>
+        <div class="svc"><a href="/tree-removal/"><h3>Tree removal</h3><p>Dead, leaning or unwanted trees taken down safely, including large oaks near homes, pools and power lines.</p><p class="more">Tree removal in Ormond Beach &rarr;</p></a></div>
+        <div class="svc"><a href="/tree-trimming/"><h3>Tree trimming</h3><p>Pruning to thin crowns, lift limbs off roofs and driveways, and cut back weak branches before storm season.</p><p class="more">Tree trimming in Ormond Beach &rarr;</p></a></div>
+        <div class="svc"><a href="/palm-trimming/"><h3>Palm trimming</h3><p>Removal of dead fronds, seed pods and boots without over-cutting the healthy green fronds palms need.</p><p class="more">Palm trimming in Ormond Beach &rarr;</p></a></div>
+        <div class="svc"><a href="/stump-grinding/"><h3>Stump grinding</h3><p>Stumps ground below grade so the spot can be sodded, planted or built on.</p><p class="more">Stump grinding in Ormond Beach &rarr;</p></a></div>
+        <div class="svc"><a href="/storm-cleanup/"><h3>Storm cleanup</h3><p>Fallen trees and hanging limbs after hurricanes and summer storms. Call for urgent jobs.</p><p class="more">Storm cleanup in Ormond Beach &rarr;</p></a></div>
         <div class="svc"><h3>Lot clearing</h3><p>Brush, small trees and debris cleared from lots and overgrown yards.</p></div>
       </div>
     </div>
@@ -285,34 +175,6 @@ footer p { margin: 0; max-width: 80ch; }
   ]
 }
 </script>
-<script>
-// Sends the quote form to the Pages Function at /api/lead.
-document.getElementById('lead-form').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  var form = this;
-  var msg = document.getElementById('form-msg');
-  var btn = form.querySelector('button[type="submit"]');
-  msg.hidden = false;
-  if (!form.checkValidity()) {
-    msg.textContent = 'Please fill in your name, email and phone so a tree pro can reach you.';
-    return;
-  }
-  btn.disabled = true;
-  msg.textContent = 'Sending...';
-  try {
-    var res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-    var out = await res.json().catch(function () { return {}; });
-    if (res.ok && out.ok) {
-      form.reset();
-      msg.textContent = 'Thanks! Your request was sent. A local tree pro will reach out soon.';
-    } else {
-      msg.textContent = out.error || 'Something went wrong. Please call or text (386) 242-8812.';
-    }
-  } catch (err) {
-    msg.textContent = 'Something went wrong. Please call or text (386) 242-8812.';
-  }
-  btn.disabled = false;
-});
-</script>
+<script src="/form.js" defer></script>
 </body>
 </html>
