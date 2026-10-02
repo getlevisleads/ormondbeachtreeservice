@@ -40,6 +40,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   const receivedAt = new Date().toISOString();
+  const page = clean(request.headers.get("referer"), 500);
   let saved = false;
   let emailed = false;
 
@@ -47,7 +48,7 @@ export async function onRequestPost({ request, env }) {
     try {
       await env.DB.prepare(
         "INSERT INTO leads (received_at, name, email, phone, message, page) VALUES (?, ?, ?, ?, ?, ?)"
-      ).bind(receivedAt, lead.name, lead.email, lead.phone, lead.message, request.headers.get("referer") || "").run();
+      ).bind(receivedAt, lead.name, lead.email, lead.phone, lead.message, page).run();
       saved = true;
     } catch (err) {
       console.error("D1 insert failed", err);
@@ -55,7 +56,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   if (env.RESEND_API_KEY && env.LEAD_TO && env.LEAD_FROM) {
-    const rows = [["Name", lead.name], ["Phone", lead.phone], ["Email", lead.email], ["Message", lead.message || "(none)"]]
+    const rows = [["Name", lead.name], ["Phone", lead.phone], ["Email", lead.email], ["Message", lead.message || "(none)"], ["Page", page || "(unknown)"]]
       .map(([k, v]) => `<p><strong>${k}:</strong> ${escapeHtml(v).replace(/\n/g, "<br>")}</p>`).join("");
     try {
       const res = await fetch("https://api.resend.com/emails", {
