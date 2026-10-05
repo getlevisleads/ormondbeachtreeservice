@@ -10,3 +10,12 @@ CREATE TABLE IF NOT EXISTS leads (
   message TEXT,
   page TEXT
 );
+
+-- Taps on Call and Text buttons. functions/api/click.js also creates this table on first use.
+CREATE TABLE IF NOT EXISTS clicks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  received_at TEXT NOT NULL,
+  type TEXT NOT NULL,
+  page TEXT,
+  source TEXT
+);

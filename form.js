@@ -1,3 +1,16 @@
+// Logs taps on Call (tel:) and Text (sms:) links to /api/click, so phone leads can be counted.
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="sms:"]');
+  if (!a || !navigator.sendBeacon) return;
+  var data = new FormData();
+  data.append('type', a.getAttribute('href').indexOf('sms:') === 0 ? 'text' : 'call');
+  data.append('page', location.pathname);
+  var ref = '';
+  try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (err) {}
+  data.append('source', ref === location.hostname ? '' : ref);
+  navigator.sendBeacon('/api/click', data);
+});
+
 // Sends the quote form to the Pages Function at /api/lead.
 document.getElementById('lead-form').addEventListener('submit', async function (e) {
   e.preventDefault();
